@@ -20,7 +20,7 @@ license=('BSD')
 groups=('mozc-im')
 depends=('mozc' 'uim')
 install=${pkgname}.install
-makedepends=('pkg-config' 'python2' 'git' 'ninja' 'clang')
+makedepends=('pkg-config' 'python' 'git' 'ninja' 'clang')
 source=(
   mozc::git+https://github.com/google/mozc.git#commit=${_mozcrev}
   uim-mozc::git+https://github.com/e-kato/macuim.git#commit=${_uimmozcrev}
@@ -37,7 +37,7 @@ pkgver() {
 
 prepare() {
   cd "$srcdir"
-  ln -sf `which python2` ./python
+  ln -sf `which python` ./python
   PATH="${srcdir}:${PATH}"
 
   cd "${srcdir}/${_pkgname}/"
@@ -62,8 +62,8 @@ build() {
 
   unset CC CC_host CC_target CXX CXX_host CXX_target LINK AR AR_host AR_target \
         NM NM_host NM_target READELF READELF_host READELF_target
-  python2 build_mozc.py gyp --target_platform=Linux
-  python2 build_mozc.py build -c $_bldtype unix/uim/uim.gyp:uim-mozc
+  python build_mozc.py gyp --target_platform=Linux
+  python build_mozc.py build -c $_bldtype unix/uim/uim.gyp:uim-mozc
 }
 
 package() {
