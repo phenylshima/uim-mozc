@@ -1,0 +1,23 @@
+--- src.orig/unix/uim/key_translator.h
++++ src/unix/uim/key_translator.h
+@@ -40,6 +40,11 @@
+ #include "base/port.h"
+ #include "protocol/commands.pb.h"
+ 
++#define arraysize(f) (sizeof(f) / sizeof(*f))
++using std::string;
++typedef uint64_t uint64;
++typedef int32_t int32;
++
+ namespace mozc {
+ namespace uim {
+ 
+@@ -102,7 +107,7 @@
+   KanaMap kana_map_jp_;  // mapping for JP keyboard.
+   KanaMap kana_map_us_;  // mapping for US keyboard.
+ 
+-  DISALLOW_COPY_AND_ASSIGN(KeyTranslator);
++  // DISALLOW_COPY_AND_ASSIGN(KeyTranslator);
+ };
+ 
+ }  // namespace uim
