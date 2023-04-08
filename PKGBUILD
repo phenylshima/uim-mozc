@@ -1,4 +1,4 @@
-# Maintainer: ponsfoot <cabezon dot hashimoto at gmail dot com>
+# Maintainer: phenylshima
 
 ## NOTE: This doens't support kill_line feature of uim.
 
@@ -31,9 +31,9 @@ source=(
 sha1sums=(
   'SKIP'
   'SKIP'
-  'SKIP'
-  'SKIP'
-  'SKIP'
+  '7547e5cae4df8b516580c882bc975d8a70251db1'
+  'c05d523865fcef2204cc3b39dcaf1ff807329855'
+  'decb1a27894cf52c8a562dbf731e1654ef2f9b5e'
 )
 
 prepare() {
