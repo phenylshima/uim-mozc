@@ -61,7 +61,7 @@ build() {
 
   unset ANDROID_NDK_HOME
   export JAVA_HOME='/usr/lib/jvm/java-11-openjdk/'
-  bazel build unix/uim:uim-mozc --config oss_linux --compilation_mode opt
+  bazel build unix/uim:uim-mozc --config oss_linux --compilation_mode opt --experimental_cc_shared_library
 }
 
 package() {

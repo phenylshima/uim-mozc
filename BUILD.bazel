@@ -42,7 +42,7 @@ mozc_cc_library(
 )
 
 mozc_cc_library(
-    name = "uim_mozc_lib",
+    name = "uim_mozc_key_lib",
     linkstatic = True,
     srcs = [
         "key_translator.cc",
@@ -61,17 +61,22 @@ mozc_cc_library(
 
 
 cc_library(
-    name = "uim-mozc",
+    name = "uim_mozc_lib",
     srcs = ["mozc.cc"],
-    visibility = ["//visibility:public"],
     deps = [
         ":uim_header",
-        ":uim_mozc_lib",
+        ":uim_mozc_key_lib",
         "//base:init_mozc",
         "//base:util",
         "//base:version",
         "//client",
         "//protocol:commands_cc_proto",
-        "@uim//:uim"
+        "@uim//:uim",
+        "@com_google_protobuf//:protobuf",
     ],
+)
+
+cc_shared_library(
+    name = "uim-mozc",
+    roots = ["uim_mozc_lib"],
 )
