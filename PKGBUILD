@@ -7,7 +7,7 @@ _bldtype=Release
 #_bldtype=Debug
 
 _uimmozcrev="7beac7ba000e0459a4dc933f3873b521664d2665"
-_mozcrev="419cd98728f984682190506e71b3b1447d73030a"
+_mozcrev="961949a1561348031fe03f72de46d480695734d2"
 
 pkgname=uim-mozc
 _pkgname=mozc
