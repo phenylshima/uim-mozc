@@ -7,11 +7,11 @@ _bldtype=Release
 #_bldtype=Debug
 
 _uimmozcrev="7beac7ba000e0459a4dc933f3873b521664d2665"
-_mozcrev="961949a1561348031fe03f72de46d480695734d2"
+_mozcrev="7925e776f7964edb82846e54252bcedf82341d17"
 
 pkgname=uim-mozc
 _pkgname=mozc
-pkgver=2.28.5029.102
+pkgver=2.28.5080.102
 pkgrel=1
 pkgdesc="uim plugin module for Mozc"
 arch=('i686' 'x86_64')
