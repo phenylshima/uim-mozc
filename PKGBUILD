@@ -1,10 +1,7 @@
 # Maintainer: phenylshima
+# Contributor: ponsfoot <cabezon dot hashimoto at gmail dot com>
 
 ## NOTE: This doens't support kill_line feature of uim.
-
-## Mozc compile option
-_bldtype=Release
-#_bldtype=Debug
 
 _uimmozcrev="7beac7ba000e0459a4dc933f3873b521664d2665"
 _mozcrev="7925e776f7964edb82846e54252bcedf82341d17"
@@ -18,7 +15,7 @@ arch=('i686' 'x86_64')
 url="https://github.com/e-kato/macuim"
 license=('BSD')
 groups=('mozc-im')
-depends=('mozc' 'uim')
+depends=('mozc>=2.28.5080.102' 'uim')
 install=${pkgname}.install
 makedepends=('bazel' 'git' 'python')
 source=(
