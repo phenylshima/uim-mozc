@@ -4,18 +4,18 @@
 ## NOTE: This doens't support kill_line feature of uim.
 
 _uimmozcrev="7beac7ba000e0459a4dc933f3873b521664d2665"
-_mozcrev="7925e776f7964edb82846e54252bcedf82341d17"
+_mozcrev="4df261a9e81a813de20634617c8df6fdbbfeaa0e"
 
 pkgname=uim-mozc
 _pkgname=mozc
-pkgver=2.28.5080.102
+pkgver=2.28.5085.102
 pkgrel=1
 pkgdesc="uim plugin module for Mozc"
 arch=('i686' 'x86_64')
 url="https://github.com/e-kato/macuim"
 license=('BSD')
 groups=('mozc-im')
-depends=('mozc>=2.28.5080.102' 'uim')
+depends=('mozc>=2.28.5085.102' 'uim')
 install=${pkgname}.install
 makedepends=('bazel' 'git' 'python')
 source=(
@@ -58,7 +58,7 @@ build() {
 
   unset ANDROID_NDK_HOME
   export JAVA_HOME='/usr/lib/jvm/java-11-openjdk/'
-  bazel build unix/uim:uim-mozc --config oss_linux --compilation_mode opt --experimental_cc_shared_library
+  bazel build unix/uim:uim-mozc unix/icons --config oss_linux --compilation_mode opt --experimental_cc_shared_library
 }
 
 package() {
