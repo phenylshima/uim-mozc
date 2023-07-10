@@ -4,18 +4,18 @@
 ## NOTE: This doens't support kill_line feature of uim.
 
 _uimmozcrev="7beac7ba000e0459a4dc933f3873b521664d2665"
-_mozcrev="4081973241bcd600ecc9e0dcdccc299fe53ca005"
+_mozcrev="cb3150e6d6d2e80e7bfff35944c20510e557dcad"
 
 pkgname=uim-mozc
 _pkgname=mozc
-pkgver=2.28.5105.102
+pkgver=2.29.5135.102
 pkgrel=1
 pkgdesc="uim plugin module for Mozc"
 arch=('i686' 'x86_64')
 url="https://github.com/e-kato/macuim"
 license=('BSD')
 groups=('mozc-im')
-depends=('mozc>=2.28.5105.102' 'uim')
+depends=('mozc>=2.29.5135.102' 'uim')
 install=${pkgname}.install
 makedepends=('bazel' 'git' 'python')
 source=(
