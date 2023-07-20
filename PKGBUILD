@@ -29,7 +29,7 @@ sha1sums=(
   'SKIP'
   'SKIP'
   '7547e5cae4df8b516580c882bc975d8a70251db1'
-  'c05d523865fcef2204cc3b39dcaf1ff807329855'
+  'b65c45338b3d0b86d32c78cd26b50e916f5187d2'
   'decb1a27894cf52c8a562dbf731e1654ef2f9b5e'
 )
 
