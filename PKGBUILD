@@ -3,6 +3,8 @@
 
 ## NOTE: This doens't support kill_line feature of uim.
 
+# renovate: aur-sync depName=mozc e0c13d859ee3a15aded60d256af0260f8ea67e51
+
 _uimmozcrev="7beac7ba000e0459a4dc933f3873b521664d2665"
 _mozcrev="cb3150e6d6d2e80e7bfff35944c20510e557dcad"
 
@@ -25,13 +27,11 @@ source=(
   'mozc.patch'
   'BUILD.bazel'
 )
-sha1sums=(
-  'SKIP'
-  'SKIP'
-  '7547e5cae4df8b516580c882bc975d8a70251db1'
-  'b65c45338b3d0b86d32c78cd26b50e916f5187d2'
-  'decb1a27894cf52c8a562dbf731e1654ef2f9b5e'
-)
+sha1sums=('SKIP'
+          'SKIP'
+          '7547e5cae4df8b516580c882bc975d8a70251db1'
+          'b65c45338b3d0b86d32c78cd26b50e916f5187d2'
+          'decb1a27894cf52c8a562dbf731e1654ef2f9b5e')
 
 prepare() {
   cd "${srcdir}/${_pkgname}/"
