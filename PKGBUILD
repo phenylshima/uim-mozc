@@ -3,7 +3,7 @@
 
 ## NOTE: This doens't support kill_line feature of uim.
 
-# renovate: aur-sync depName=mozc e0c13d859ee3a15aded60d256af0260f8ea67e51
+# renovate: aur-sync depName=mozc 8f788f4a0be3e6c6051726395bf9afb16c4e4a32
 
 _uimmozcrev="7beac7ba000e0459a4dc933f3873b521664d2665"
 _mozcrev="cb3150e6d6d2e80e7bfff35944c20510e557dcad"
