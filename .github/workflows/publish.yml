@@ -1,6 +1,7 @@
 name: publish
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -25,10 +26,10 @@ jobs:
 
       - name: Publish package
         uses: KSXGitHub/github-actions-deploy-aur@063daf78a56662642bb00049ce78425ff6d0fad7 # v2.7.0
-        if: ${{ env.pkgbuild != '' }}
+        if: ${{ env.pkgbuild != '' || github.event_name == 'workflow_dispatch' }}
         with:
           pkgname: uim-mozc
-          pkgbuild: ${{ env.pkgbuild }}/PKGBUILD
+          pkgbuild: PKGBUILD
           commit_username: ${{ secrets.AUR_USERNAME }}
           commit_email: ${{ secrets.AUR_EMAIL }}
           ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
