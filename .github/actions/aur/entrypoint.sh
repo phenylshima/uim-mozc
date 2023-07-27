@@ -19,8 +19,8 @@ echo "::endgroup::"
 
 echo "::group::Linking cache directory"
 sudo mkdir -p "$GITHUB_WORKSPACE"/.cache
-sudo chown root:builder "$GITHUB_WORKSPACE"/.cache
-sudo chmod 775 "$GITHUB_WORKSPACE"/.cache
+sudo chown -R root:builder "$GITHUB_WORKSPACE"/.cache
+sudo chmod -R 775 "$GITHUB_WORKSPACE"/.cache
 ln -s "$GITHUB_WORKSPACE"/.cache "$HOME"/.cache
 echo "::endgroup::"
 
