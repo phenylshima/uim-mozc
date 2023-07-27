@@ -21,14 +21,19 @@ jobs:
           #!/usr/bin/env bash
           set -euxo pipefail
 
-          echo "pkgbuild=$(git diff --name-only HEAD HEAD~1 "*/.SRCINFO" | head -1 | xargs dirname)" >> $GITHUB_ENV
+          echo "pkgbuild=$(git diff --name-only HEAD HEAD~1 ".SRCINFO" | head -1 | xargs dirname)" >> $GITHUB_ENV
 
-      # - name: Publish package
-      #   uses: KSXGitHub/github-actions-deploy-aur@063daf78a56662642bb00049ce78425ff6d0fad7 # v2.7.0
-      #   if: ${{ env.pkgbuild != '' }}
-      #   with:
-      #     pkgname: ${{ env.pkgbuild }}
-      #     pkgbuild: ${{ env.pkgbuild }}/PKGBUILD
-      #     commit_username: ${{ secrets.AUR_USERNAME }}
-      #     commit_email: ${{ secrets.AUR_EMAIL }}
-      #     ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+      - name: Publish package
+        uses: KSXGitHub/github-actions-deploy-aur@063daf78a56662642bb00049ce78425ff6d0fad7 # v2.7.0
+        if: ${{ env.pkgbuild != '' }}
+        with:
+          pkgname: uim-mozc
+          pkgbuild: ${{ env.pkgbuild }}/PKGBUILD
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          assets: |
+            bazel.patch
+            BUILD.bazel
+            mozc.patch
+            uim-mozc.install

@@ -1,4 +1,4 @@
-# Maintainer: phenylshima
+# Maintainer: phenylshima <phenylshima at outlook dot com>
 # Contributor: ponsfoot <cabezon dot hashimoto at gmail dot com>
 
 ## NOTE: This doens't support kill_line feature of uim.
