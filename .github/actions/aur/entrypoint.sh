@@ -39,7 +39,8 @@ paru -Syu --removemake --needed --noconfirm "${depends[@]}" "${makedepends[@]}"
 echo "::endgroup::"
 
 echo "::group::Running makepkg"
-makepkg
+makepkg -si
+sudo cp -fv *.tar.zst "$WORKPATH"
 echo "::endgroup::"
 
 echo "::group::Generating new .SRCINFO based on PKGBUILD"
