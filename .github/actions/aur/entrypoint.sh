@@ -39,7 +39,7 @@ paru -Syu --removemake --needed --noconfirm "${depends[@]}" "${makedepends[@]}"
 echo "::endgroup::"
 
 echo "::group::Running makepkg"
-makepkg -siy
+makepkg -si --noconfirm
 sudo cp -fv *.tar.zst "$WORKPATH"
 echo "::endgroup::"
 
