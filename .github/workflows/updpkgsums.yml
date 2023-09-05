@@ -26,7 +26,7 @@ jobs:
           set -euxo pipefail
 
           # echo "pkgbuild=$(git diff --name-only origin/master origin/${GITHUB_HEAD_REF} "*PKGBUILD" | head -1 | xargs dirname)" >> $GITHUB_ENV
-          echo "pkgbuild=PKGBUILD" >> $GITHUB_ENV
+          echo "pkgbuild=." >> $GITHUB_ENV
 
       - name: Cache packages and bazel builds
         uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
