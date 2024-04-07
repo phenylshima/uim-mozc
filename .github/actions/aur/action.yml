@@ -6,9 +6,6 @@ branding:
   color: 'blue'
 
 inputs:
-  action:
-    description: "Which action to take. Can be 'updpkgsums' or 'publish'"
-    required: true
   pkgname:
     description: ''
     required: true
@@ -17,5 +14,4 @@ runs:
   using: docker
   image: 'Dockerfile'
   args:
-    - ${{ inputs.action }}
     - ${{ inputs.pkgname }}
