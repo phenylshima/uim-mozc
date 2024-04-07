@@ -28,10 +28,9 @@ echo "::group::Updating archlinux-keyring"
 sudo pacman -S --noconfirm archlinux-keyring
 echo "::endgroup::"
 
-# echo "::group::Updating checksums on PKGBUILD"
-# updpkgsums
-# git diff PKGBUILD
-# echo "::endgroup::"
+echo "::group::PKGBUILD diff"
+git diff PKGBUILD
+echo "::endgroup::"
 
 echo "::group::Installing depends using paru"
 source PKGBUILD

@@ -1,4 +1,4 @@
-name: updpkgsums
+name: Update Package
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  updpkgsums:
+  update_package:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -43,7 +43,6 @@ jobs:
         if: ${{ env.pkgbuild != '' }}
         uses: ./.github/actions/aur
         with:
-          action: 'updpkgsums'
           pkgname: ${{ env.pkgbuild }}
 
       - name: Commit
