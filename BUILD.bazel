@@ -54,6 +54,7 @@ mozc_cc_library(
         ":uim_header",
         "//base:port",
         "//base:vlog",
+        "//base:log_file",
         "//base:util",
         "//client",
         "//protocol:commands_cc_proto",
