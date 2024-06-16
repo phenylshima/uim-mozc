@@ -30,7 +30,7 @@ source=(
 sha1sums=('SKIP'
           'SKIP'
           '7547e5cae4df8b516580c882bc975d8a70251db1'
-          '44fe1eac88f560b63b09f46f9bf556582c12a2ef'
+          '783bb0f1032cac5ac7f3be81ef8bba47223fb0d5'
           'ec966e854038f3175266370d6b1fbd2a78b4f5a7')
 
 prepare() {
