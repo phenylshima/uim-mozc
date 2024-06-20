@@ -34,7 +34,7 @@ echo "::endgroup::"
 
 echo "::group::Installing depends using paru"
 source PKGBUILD
-paru -Syu --removemake --needed --noconfirm "${depends[@]}" "${makedepends[@]}"
+paru -Syu --removemake --needed --noconfirm --mflags=CFLAGS="-Wno-implicit-function-declaration" "${depends[@]}" "${makedepends[@]}" 
 echo "::endgroup::"
 
 echo "::group::Running makepkg"
