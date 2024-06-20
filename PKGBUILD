@@ -30,8 +30,8 @@ source=(
 sha1sums=('SKIP'
           'SKIP'
           '7547e5cae4df8b516580c882bc975d8a70251db1'
-          '783bb0f1032cac5ac7f3be81ef8bba47223fb0d5'
-          'e71514321fa54e91d9e6db6127ed1526d6caf3df')
+          'eff91b1139561bb5e2f90936776b8e796e7506a7'
+          '279a05a3e6339c388744f16952ccd798ab9989a8')
 
 prepare() {
   cd "${srcdir}/${_pkgname}/"

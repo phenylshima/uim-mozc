@@ -34,11 +34,13 @@
  }  // namespace uim
 --- src.orig/unix/uim/key_translator.cc
 +++ src/unix/uim/key_translator.cc
-@@ -32,7 +32,7 @@
+@@ -32,7 +32,9 @@
  
  #include <uim.h>
  
 -#include "base/logging.h"
++#include "absl/log/log.h"
++#include "absl/log/check.h"
 +#include "base/log_file.h"
  
  namespace {
