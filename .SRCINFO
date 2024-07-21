@@ -1,7 +1,7 @@
 pkgbase = uim-mozc
 	pkgdesc = uim plugin module for Mozc
 	pkgver = 2.30.5520.102
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/e-kato/macuim
 	install = uim-mozc.install
 	arch = i686
