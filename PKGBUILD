@@ -11,7 +11,7 @@ _mozcrev="d2fc9c7d9269cc84b9a4a680cafc382a55e90f42"
 pkgname=uim-mozc
 _pkgname=mozc
 pkgver=2.30.5520.102
-pkgrel=1
+pkgrel=2
 pkgdesc="uim plugin module for Mozc"
 arch=('i686' 'x86_64')
 url="https://github.com/e-kato/macuim"
@@ -57,7 +57,9 @@ build() {
   msg "Starting make..."
 
   unset ANDROID_NDK_HOME
-  export JAVA_HOME='/usr/lib/jvm/java-11-openjdk/'
+  unset ANDROID_HOME
+  export JAVA_HOME='/usr/lib/jvm/java-21-openjdk/'
+
   bazel build unix/uim:uim-mozc unix/icons --config oss_linux --compilation_mode opt --cxxopt=-Wno-uninitialized --host_cxxopt=-Wno-uninitialized --experimental_cc_shared_library
 }
 
