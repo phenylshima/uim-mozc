@@ -6,7 +6,7 @@ echo "Mozc AUR commit id: $MOZC_ID"
 MOZC=$(curl "https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=mozc&id=$MOZC_ID")
 
 PKGVER=$(echo "$MOZC"|sed -nr 's/^pkgver=(.*)$/\1/p')
-COMMIT_REF=$(echo "$MOZC"|sed -nr 's|^source=\(.*https://github.com/google/mozc.git#commit=([0-9a-fA-F]+)"\)$|\1|p')
+COMMIT_REF=$(echo "$MOZC"|sed -nr 's|git+https://github.com/google/mozc.git#commit=([0-9a-fA-F]+)"|\1|p')
 
 echo "Package Version: $PKGVER"
 echo "Mozc commit id : $COMMIT_REF"
