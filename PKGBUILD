@@ -11,7 +11,7 @@ _mozcrev="5e6abfe1853b080766def432b746a9bed79e54b0"
 pkgname=uim-mozc
 _pkgname=mozc
 pkgver=2.30.5544.102
-pkgrel=2
+pkgrel=1
 pkgdesc="uim plugin module for Mozc"
 arch=('i686' 'x86_64')
 url="https://github.com/e-kato/macuim"
@@ -29,7 +29,7 @@ source=(
 )
 sha1sums=('SKIP'
           'SKIP'
-          '7547e5cae4df8b516580c882bc975d8a70251db1'
+          '75958f43e56cc7d4588ec5dd83955c7ed3e19b57'
           'eff91b1139561bb5e2f90936776b8e796e7506a7'
           'eb8bcf1e55280ad85960aad3bce7631a487bb5f6')
 
