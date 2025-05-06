@@ -4,7 +4,8 @@ RUN pacman -Syu --needed --noconfirm pacman-contrib namcap git sudo && \
   useradd -m builder && \
   echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-USER runner
+WORKDIR /home/builder
+USER builder  
 
 COPY entrypoint.sh /entrypoint.sh
 
