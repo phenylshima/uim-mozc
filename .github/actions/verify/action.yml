@@ -1,4 +1,4 @@
-name: 'Arch Linux User Repository (AUR) GitHub Action'
+name: 'Arch Linux User Repository (AUR) Verifier GitHub Action'
 description: ''
 author: 'JamieMagee'
 branding:

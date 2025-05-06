@@ -1,0 +1,17 @@
+name: 'SRCINFO generator GitHub Action'
+description: 'Generates .SRCINFO files for AUR packages'
+author: 'JamieMagee'
+branding:
+  icon: 'package'
+  color: 'red'
+
+inputs:
+  pkgname:
+    description: 'The name of the package to generate .SRCINFO for'
+    required: true
+
+runs:
+  using: docker
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.pkgname }}
