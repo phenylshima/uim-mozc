@@ -34,6 +34,7 @@ jobs:
 
       - name: Update SRCINFO
         uses: ./.github/actions/srcinfo
+        if: ${{ env.pkgbuild != '' }}
         with:
           pkgname: ${{ env.pkgbuild }}
 
