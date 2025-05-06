@@ -7,7 +7,7 @@ RUN groupadd -g 1001 runner && \
     echo 'runner ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 WORKDIR /home/runner
-USER runner  
+USER runner
 
 # Install paru
 RUN git clone https://aur.archlinux.org/paru-bin.git

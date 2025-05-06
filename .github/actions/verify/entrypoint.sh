@@ -8,6 +8,14 @@ echo "::endgroup::"
 WORKPATH=$GITHUB_WORKSPACE/$INPUT_PKGNAME
 cd $WORKPATH
 
+ls -la $GITHUB_WORKSPACE
+ls -la $WORKPATH
+
+echo "::group::Linking cache directory"
+mkdir -p "$GITHUB_WORKSPACE"/.cache
+ln -s "$GITHUB_WORKSPACE"/.cache "$HOME"/.cache
+echo "::endgroup::"
+
 echo "::group::Updating archlinux-keyring"
 sudo pacman -S --noconfirm archlinux-keyring
 echo "::endgroup::"
