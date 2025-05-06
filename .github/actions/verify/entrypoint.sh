@@ -28,8 +28,9 @@ echo "::group::Updating archlinux-keyring"
 sudo pacman -S --noconfirm archlinux-keyring
 echo "::endgroup::"
 
-echo "::group::PKGBUILD diff"
+echo "::group::PKGBUILD and .SRCINFO diff"
 git diff PKGBUILD
+git diff .SRCINFO
 echo "::endgroup::"
 
 echo "::group::Installing depends using paru"
@@ -39,11 +40,6 @@ echo "::endgroup::"
 
 echo "::group::Running makepkg"
 makepkg
-echo "::endgroup::"
-
-echo "::group::Generating new .SRCINFO based on PKGBUILD"
-makepkg --printsrcinfo >.SRCINFO
-git diff .SRCINFO
 echo "::endgroup::"
 
 echo "::group::Copying files from $HOME/gh-action to $WORKPATH"
