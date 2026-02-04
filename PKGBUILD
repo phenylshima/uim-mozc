@@ -6,18 +6,18 @@
 # renovate: aur-sync depName=mozc ba72b401ebf729ff7d377ed6c2ad55a5c94d0b8b
 
 _uimmozcrev="7beac7ba000e0459a4dc933f3873b521664d2665"
-_mozcrev="d9c3f195582de6b0baa07ecb81a04e8902acf9af"
+_mozcrev="3052f08b2bc0d60c84f640eecb74fcf77d05addc"
 
 pkgname=uim-mozc
 _pkgname=mozc
-pkgver=2.32.5994.102
+pkgver=3.33.6079.102
 pkgrel=1
 pkgdesc="uim plugin module for Mozc"
 arch=('i686' 'x86_64')
 url="https://github.com/e-kato/macuim"
 license=('BSD')
 groups=('mozc-im')
-depends=('mozc>=2.32.5994.102' 'uim')
+depends=('mozc>=3.33.6079.102' 'uim')
 install=${pkgname}.install
 makedepends=('bazel' 'git' 'python')
 source=(
