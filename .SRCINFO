@@ -21,7 +21,7 @@ pkgbase = uim-mozc
 	sha1sums = SKIP
 	sha1sums = SKIP
 	sha1sums = 526283e85d29763fef6fe8e7851e5ae91311982d
-	sha1sums = 8392aa676131294438ad8a5c7caa3704d7104467
+	sha1sums = 573f03428b0e6aa9c35702a411bae4e2721abd59
 	sha1sums = eb8bcf1e55280ad85960aad3bce7631a487bb5f6
 
 pkgname = uim-mozc
